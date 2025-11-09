@@ -1,45 +1,84 @@
-
-'''
-for i in range(1, 5):
-    for j in range(1, i+1):
-       print(j, end=' ')
-    print()
-'''
-'''
-for i in range(4, 0, -1):     
-    for j in range(i):         
-        print('*',end=' ')
-    print()  
-'''
-'''
-numbers=[2,3,4.5,6]
-sum=0
+"""
+numbers=[1,3,2,4]
+new_numbers=[]
 for i in numbers:
-    sum+=i
-average = sum/len(numbers)  
-print(f'{average:.2f}')
-average=round(average,2) 
-print(average)
-'''
-'''
-numbers=[3,2,5,4,6]
-new_value=int(input('Въведете число, с което да се заменят четните елементи: '))
+    new_numbers.append(i*2)
+print(new_numbers)
+"""
+"""
+n=int(input("Въведете броя на хората: "))
 
-for i in range(len(numbers)):
-   if numbers[i]%2==0:
-      numbers[i]=new_value
-print("Новият масив е:", numbers)      
+names=[]
+ages=[]
 
-'''
-number=[]
+for i in range(n):
+    name=input(f"Enter name {i+1}:")
+    age=input(f"Enter age {i+1}:")
+    names.append(name)
+    ages.append(age)
 
-for i in range(5):
-    num=float(input(f'Enter a number {i+1}:'))
-    number.append(num)
-max_number=max(number) 
-if max_number.is_integer():
-    print("Най-голямото число е:", int(max_number))
-else:
-    print(f"Най-голямото число е: {max_number}") 
+min_age=min(ages)  
+index=ages.index(min_age)
+
+print(f"{names[index]} is {ages[index]} years old")
+"""
+"""
+n=int(input("Enter number N:"))
+first=[]
+for i in range(n):
+    num=int(input(f"Enter number {i+1}:"))
+    first.append(num)
+
+m=int(input("Enter number M:"))
+second=[]
+for i in range(m):
+    num=int(input(f"Enter number {i+1}:"))
+    second.append(num)
+
+combined=first+second
+
+print(first)
+print(second)
+print(combined)
+"""
+"""
+numbers=[5,3,4,2,2,3,3]
+
+search=int(input("Enter number for search:"))
+
+count = 0
+
+for i in numbers:
+    if i == search:
+       count += 1
+
+print(count)
+"""
+"""
+numbers = [5, -3, 7, -2, 4, -1, 6]
+
+sum_positive=0
+for i in numbers:
+    if i>0:
+        sum_positive+=i
+
+print(sum_positive)
+"""
+numbers=[1,3,4,6,2]
+
+is_sorted=True
+
+for i in range(len(numbers)-1):
+    if numbers[i]>numbers[i+1]:
+        is_sorted=False
+        break
+
+if is_sorted:
+    print("The array is sorted in ascending order")
+else:  
+     print("The array is NOT sorted in ascending order")  
+
+
+
 
                   
