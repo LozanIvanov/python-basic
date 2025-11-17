@@ -37,7 +37,7 @@ class User:
         book.is_borrowed = True
         self.borrowed_books.append(book)
         return True
-
+ 
     def return_book(self, book):
         if book not in self.borrowed_books:
             print(f"{self.name} does not have '{book.title}'.")
