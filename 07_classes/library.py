@@ -27,8 +27,12 @@ class Book:
 class Library:
     def __init__(self):
         self.books = []
-
+     
+     #def add_book(self, book: Book): this is to add only class Book not other class like Car
     def add_book(self, book):
+        #if not isinstance(book, Book):this is to add only class Book not other class like Car
+       # print("Error: This is not a Book object!")
+       # return False
         self.books.append(book)
 
     def find_book(self, title):
